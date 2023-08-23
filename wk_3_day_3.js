@@ -9,6 +9,7 @@
 // Create a function called "hack". This function will receive an array and return it with all the user values updated to your information.
 // Use the map method.
 
+let users = []
 class User {
     constructor(firstName, lastName, username, password, email){
         this.first = firstName
@@ -18,7 +19,8 @@ class User {
         this.email = email
 
 
-        this.subscribe = false
+        this.subscribed = false
+        users.push(this)
     }
 
     subscribe = () => {
@@ -39,33 +41,16 @@ let sarah = new User('sarah', 'smith', 'ssmith', 'password1', 'ssmith@icloud.com
 let jack = new User('jack', 'morris', 'jmorris', 'password2', 'jmorris@icloud.com')
 let lauren = new User('lauren', 'doe', 'ldoe', 'password4', 'ldoe@icloud.com')
 
+// users.push(tara, john, sarah, jack, lauren)
 
-function subscribeUsersWithStartingLetters(arr){
+const subscribeByName = (arr) => {
     arr.forEach(user => {
-        const firstLetter = user.firstName.toUppercase();
-        if (firstLetter === 'S' || firstLetter === 'M' || firstLetter === 'L'){
-            user.subscribe();
+        let {first} = user 
+        first = first.toLowerCase()
+        if(first[0] === 's' || first.startsWith('m') || first[0] === 'l'){
+            user.subscribe()
         }
-    });
+    })
 }
-
-function getSubscribedUsers(arr){
-    return arr.filter(user => user.subscribed);
-}
-
-function hack(arr){
-    return arr.map(user => ({
-        ...user,
-        firstName: 'Sam',
-        lastName: 'Smith',
-        username: 's.smith',
-        password: 'passwordsmith',
-        email: 's.smith@icloud.com'
-    }));
-}
-
-subscribeUsersWithStartingLetters(users);
-
-console.log('Subscribed Users:');
-console.log(getSubscribedUsers(users));
-console.log(subscribedUsers);
+// subscribeByName(users)
+console.log(users)
