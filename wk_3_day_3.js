@@ -11,31 +11,38 @@
 
 class User {
     constructor(firstName, lastName, username, password, email){
-        this.firstName;
-        this.lastName;
-        this.username;
-        this.password;
-        this.email;
-        this.subscribe = false;
+        this.first = firstName
+        this.last = lastName
+        this.user = username
+        this.password = password
+        this.email = email
+
+
+        this.subscribe = false
     }
 
-    subscribe(){
-        this.subscribe = !this.subscribe;
-        return this.subscribe ? `${this.username} is now subscribed.` : `${this.username} is now unsubscribed.`;
+    subscribe = () => {
+        if(this.subscribed){
+            this.subscribed = false
+            return `${this.user} has unsubscribed.`
+        } else {
+            this.subscribed = true
+            return `${this.user} has subscribed. Welcome!`
+        }
     }
 }
 
-const users = [
-    new User('tara','mehryar','tmehryar','password','tmehryar@icloud.com'),
-    new User('john', 'jacob', 'jjacob', 'passw0rd', 'jjacobs@icloud.com'),
-    new User(),
-    new User(),
-    new User()
-];
+
+let tara = new User('tara','mehryar','tmehryar','password','tmehryar@icloud.com')
+let john = new User('john', 'jacob', 'jjacob', 'passw0rd', 'jjacobs@icloud.com')
+let sarah = new User('sarah', 'smith', 'ssmith', 'password1', 'ssmith@icloud.com')
+let jack = new User('jack', 'morris', 'jmorris', 'password2', 'jmorris@icloud.com')
+let lauren = new User('lauren', 'doe', 'ldoe', 'password4', 'ldoe@icloud.com')
+
 
 function subscribeUsersWithStartingLetters(arr){
     arr.forEach(user => {
-        const firstLetter = user.firstName.charAt(0).toUppercase();
+        const firstLetter = user.firstName.toUppercase();
         if (firstLetter === 'S' || firstLetter === 'M' || firstLetter === 'L'){
             user.subscribe();
         }
@@ -60,5 +67,5 @@ function hack(arr){
 subscribeUsersWithStartingLetters(users);
 
 console.log('Subscribed Users:');
-const getSubscribedUsers = getSubscribedUsers(users);
+console.log(getSubscribedUsers(users));
 console.log(subscribedUsers);
