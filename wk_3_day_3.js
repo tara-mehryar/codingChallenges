@@ -58,3 +58,7 @@ function hack(arr){
 }
 
 subscribeUsersWithStartingLetters(users);
+
+console.log('Subscribed Users:');
+const getSubscribedUsers = getSubscribedUsers(users);
+console.log(subscribedUsers);
