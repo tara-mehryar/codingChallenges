@@ -35,6 +35,26 @@ const users = [
 
 function subscribeUsersWithStartingLetters(arr){
     arr.forEach(user => {
-        const 
+        const firstLetter = user.firstName.charAt(0).toUppercase();
+        if (firstLetter === 'S' || firstLetter === 'M' || firstLetter === 'L'){
+            user.subscribe();
+        }
     });
 }
+
+function getSubscribedUsers(arr){
+    return arr.filter(user => user.subscribed);
+}
+
+function hack(arr){
+    return arr.map(user => ({
+        ...user,
+        firstName: 'Sam',
+        lastName: 'Smith',
+        username: 's.smith',
+        password: 'passwordsmith',
+        email: 's.smith@icloud.com'
+    }));
+}
+
+subscribeUsersWithStartingLetters(users);
