@@ -54,3 +54,19 @@ const subscribeByName = (arr) => {
 }
 // subscribeByName(users)
 console.log(users)
+
+function getSubscribedUsers(arr) {
+    return arr.filter(user => user.subscribed);
+}
+
+function hack(arr){
+    return arr.map(user => ({
+        ...user,
+        firstName: 'Brittany',
+        lastName: 'Kile',
+        username: 'bkile',
+        password: 'passwordbk',
+        email: 'bk@icloud.com'
+    }));
+}
+
