@@ -44,4 +44,4 @@ function reverseNumber(num){
 
 const originalNumber = 1234;
 const reversedNumber = reverseNumber(originalNumber);
-console.log(reversedNumber);
+console.log(reversedNumber)
