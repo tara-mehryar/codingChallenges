@@ -67,6 +67,6 @@ function hack(arr){
         username: 'bkile',
         password: 'passwordbk',
         email: 'bk@icloud.com'
-    }));
+    }))
 }
 
