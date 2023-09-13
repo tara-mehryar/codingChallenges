@@ -1,25 +1,27 @@
 // Write a function that returns one of 3 different madLibs. The madLib string should contain placeholders for a noun,
 // adjective, verb, and color. Format these placeholders like this: #noun#
-// function generateMadLib(){
-//     const nouns = [];
-//     const adjectives = [];
-//     const verbs = [];
-//     const colors = [];
+// Madlib example: "The #color# #noun# likes to #verb# over the #adjective# lawn."
 
-//     const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
-//     const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
-//     const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
-//     const randomColor = colors[Math.floor(Math.random() * colors.length)];
+function generateMadLib(){
+    const nouns = [];
+    const adjectives = [];
+    const verbs = [];
+    const colors = [];
 
-//     const madLibs = [`The #color# #noun# likes to #verb# over the #adjective# lawn.`]
+    const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+    const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+    const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-//     const randomMadLib = madLibs[Math.floor(Math.random() * madLibs.length)];
+    const madLibs = [`The #color# #noun# likes to #verb# over the #adjective# lawn.`]
 
-//     return randomMadLib;
-// }
+    const randomMadLib = madLibs[Math.floor(Math.random() * madLibs.length)];
 
-// const randomMadLib = generateMadLib();
-// console.log(randomMadLib);
+    return randomMadLib;
+}
+
+const randomMadLib = generateMadLib();
+console.log(randomMadLib);
 
 // Solution in class:
 const generateLib = () => {
@@ -48,4 +50,4 @@ console.log(createMadLib(generateLib(),{ noun:'cat', color:'orange', adjective:'
 // Use the object values to replace the madLib placeholders, then return the completed madLib.
 
 
-// Madlib example: "The #color# #noun# likes to #verb# over the #adjective# lawn."
+
