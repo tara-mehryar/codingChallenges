@@ -67,3 +67,8 @@ const findSmallestDifference = (arr1, arr2) => {
 const arr1 = [10,20,14,16,18];
 const arr2 = [30,23,54,33,96];
 console.log(findSmallestDifference(arr1, arr2))
+
+// WhiteBoarding:
+// 1. a functin that receives 2 arrays
+// 2. a comparison variable
+// 3. a nested for loop to compare the values
