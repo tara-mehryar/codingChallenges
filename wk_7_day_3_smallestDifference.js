@@ -72,3 +72,5 @@ console.log(findSmallestDifference(arr1, arr2))
 // 1. a functin that receives 2 arrays
 // 2. a comparison variable
 // 3. a nested for loop to compare the values
+// 4. a conditional to make sure difference is positive
+// 5. a conditional to compare current lowest with the new difference
