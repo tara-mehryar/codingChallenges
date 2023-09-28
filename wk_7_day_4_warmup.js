@@ -21,7 +21,7 @@ class FakeArray {
         this.arr = arr
     }
 }
-Includes (data){
+Includes(data){
     let array = this.arr;
 
     for(let i = 0; i < array.length; i++){
