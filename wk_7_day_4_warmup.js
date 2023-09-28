@@ -6,11 +6,11 @@ class FakeArray {
 
 // Given this starter code. Write a method for FakeArray that mimics the Array.includes method. 
 
-const array = 
-
-const fakeArray = array.includes(arr)
-
-// 
-const fakeArray
-fakeArray.includes()
-// 
+const fakeArray = (arr, element) => {
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === element){
+            return true;
+        }
+    }
+    return false
+}
