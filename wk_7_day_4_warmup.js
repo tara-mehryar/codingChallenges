@@ -14,3 +14,20 @@ const fakeArray = (arr, element) => {
     }
     return false
 }
+
+//  Solution in class:
+class FakeArray {
+    constructor (arr){
+        this.arr = arr
+    }
+}
+Includes (data){
+    let array = this.arr;
+
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === data){
+            return true
+        }
+    }
+    return false
+}
