@@ -102,7 +102,7 @@ const createMinutesStr = (minutes) => {
         ]
         let tensPlace = parseInt(minuteVals[0] - 2)
         let onesPlace = parseInt(minuteVals[1])
-        return `${tens[tensPlace]}${ones[onesPlace]}}`
+        return `${tens[tensPlace]} ${ones[onesPlace]}}`
     }
 };
 
