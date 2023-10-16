@@ -44,3 +44,81 @@ console.log(timeWord("12:00"));  // 'noon'
 // 7. Construct final string 
 // 8. Return result
 
+// In-class solution:
+const createHourStr = (hours) => {
+    if (hours > 11){
+        hours = hours - 12
+    }
+
+    let hoursWords = [
+        "midnight", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "noon"
+    ];
+};
+
+const createMinutesStr = (minutes) => {
+    if (minutes < 20){
+        let minuteArr = [
+            "o'clock",
+            "oh one",
+            "oh two",
+            "oh three",
+            "oh four",
+            "oh five",
+            "oh six",
+            "oh seven",
+            "oh eight",
+            "oh nine",
+            "ten",
+            "eleven",
+            "twelve",
+            "thirteen",
+            "fourteen",
+            "fifteen",
+            "sixteen",
+            "seventeen",
+            "eighteen",
+            "nineteen"
+        ]
+        return minuteArr[minutes]
+    } else {
+        let minuteVals = String(minutes).split('')
+        let tens = [
+            'twenty',
+            'thirty',
+            'fourty',
+            'fifty'
+        ]
+        let ones = [
+            '',
+            'one',
+            'two',
+            'three',
+            'four',
+            'five',
+            'six',
+            'seven',
+            'eight',
+            'nine'
+        ]
+        let tensPlace = parseInt(minuteVals[0] - 2)
+        let onesPlace = parseInt(minuteVals[1])
+        return `${tens[tensPlace]${ones[onesPlace]}}`
+    }
+};
+
+const timeWords = str => {
+    if (str === '12:00'){
+        return 'noon'
+    } else if (str === '00:00'){
+        return 'midnight'
+    }
+    let time = str.split(':')
+
+    let hours = createHourStr(parseInt(time[0]));
+    let minutes = createMinutesStr(parseInt(time[1]));
+    let timeOfDay = parseInt(time[0]) >= 12 ? 'pm' : 'am';
+
+    return `${hours} ${minutes} ${timeOfDay}`
+};
+
+console.log(timeWords('15:57'));
