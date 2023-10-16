@@ -34,3 +34,8 @@ const timeWord = (timeStr) => {
 console.log(timeWord("00:00"));  // 'midnight'
 console.log(timeWord("12:00"));  // 'noon'
 
+// WhiteBoard Explanation:
+// 1. Create array for words to store words for hours and minutes.
+// 2. Split the input string into hours and minutes and then convert it to number values by using map(number).
+// 3. Handle special cases of noon and midnight 
+
