@@ -1,4 +1,4 @@
-function timeWord(timeStr) {
+const timeWord = (timeStr) => {
     const hoursWords = [
         "midnight", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "noon"
     ];
